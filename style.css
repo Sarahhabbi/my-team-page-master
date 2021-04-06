@@ -1,14 +1,15 @@
-
+*, ::befor, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 /* text in the header */
 .head{
     width: 100%;
-    display: flex;
     margin-top:100px;
-    justify-content: center;
-    align-content: space-between;
-}
-.head div{
-    margin-left: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 .head h1{
     display: flex;
@@ -19,7 +20,6 @@
     font-weight: 700;
     line-height: 47px;
     letter-spacing: -0.045em;
-    text-align: left;
     width: 278px;    
 }
 .head h3{
@@ -51,13 +51,14 @@ h3{
     font-weight: 600;
     line-height: 27px;
     letter-spacing: 0em;
-    text-align: left;
 }
 
 /* the grid with images */
 img{
-    width: 238px;
+    max-width: 100%;
     height: auto;
+    border-radius: 4%;
+    object-fit: cover;
 }
 .pic-text{
     display: flex;
@@ -80,7 +81,7 @@ h5{
     font-weight: 400;
     writing-mode: vertical-lr;
     text-orientation: mixed;
-    line-height: 16px; 
+    margin-left: 4px;
 }
 
 .container{
@@ -150,24 +151,15 @@ b{
 
 /* responsive */
 @media screen and (max-width: 700px){
-
     .head{
         display: flex;
         flex-flow: column;
-        padding-left:30px;
-        margin-top:20px;
+        align-items: start;
+        margin: 40px 0 0 20px;
+
     }
     .head div{
         margin:0;
-    }
-    .head h3{
-        position: inherit;
-    }
-    .head p{
-        position: inherit;
-    }
-    .head h1{
-        position: inherit;
     }
     .container{
         margin-top:100px;
